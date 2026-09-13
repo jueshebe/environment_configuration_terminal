@@ -26,3 +26,5 @@ git pull
 
 - [Kitty](kitty/README.md): base configuration, MesloLGS Nerd Font, and the
   Dracula theme.
+- [Zsh](zsh/README.md): installation instructions and future shell
+  configuration.
