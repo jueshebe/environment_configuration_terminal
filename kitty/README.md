@@ -23,6 +23,22 @@ ln -sfn ~/environment_configuration_terminal/kitty/dracula.conf \
   ~/.config/kitty/dracula.conf
 ```
 
+The wallpaper is loaded directly from the repository by `kitty.conf`:
+
+```conf
+background_image ~/environment_configuration_terminal/kitty/wallpaper.jpg
+background_image_layout cscaled
+background_image_linear yes
+background_opacity 0.5
+background_tint 0.9
+background_blur 0
+```
+
+`background_opacity` controls the terminal transparency, while
+`background_tint` controls how strongly Kitty blends the wallpaper with the
+configured background color. The desktop compositor must support transparency
+for `background_opacity` to reveal what is behind the Kitty window.
+
 Kitty now reads the files directly from the repository. Running `git pull` in
 `~/environment_configuration_terminal` updates the configuration used by Kitty
 without copying files again.
