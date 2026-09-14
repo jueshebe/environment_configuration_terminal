@@ -1,38 +1,42 @@
 # Zsh
 
-This directory contains the configuration and documentation for the Z shell.
+This directory configures [Zsh](https://www.zsh.org/), the interactive shell.
+The included `.zshrc` uses Oh My Zsh, the Powerlevel10k prompt, and plugins to
+improve the Zsh command-line experience with suggestions, syntax highlighting,
+project-specific environments, and clipboard commands.
 
 ## Installation
 
-Install Zsh by following the official Oh My Zsh installation guide for your
-operating system:
+Install Zsh by following the official guide for your operating system. This
+provides the shell that loads the rest of this configuration:
 
 [Installing Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
 ## Oh My Zsh
 
-Install Oh My Zsh to configure and extend Zsh using the official
-documentation:
+Install Oh My Zsh using the official documentation. It is the framework that
+loads the theme and plugins configured in `.zshrc`:
 
 [Oh My Zsh documentation](https://github.com/ohmyzsh/ohmyzsh/wiki)
 
 ## zsh-autosuggestions
 
-Install the `zsh-autosuggestions` plugin for Oh My Zsh by following the
-[official installation instructions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md):
+Install `zsh-autosuggestions` according to the
+[official installation instructions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md).
+It suggests commands from shell history as you type:
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
-Then enable the plugin in `~/.zshrc`:
+Then enable it in `~/.zshrc` so Oh My Zsh loads it when the shell starts:
 
 ```bash
 plugins=(... zsh-autosuggestions)
 ```
 
-Restart Zsh or reload the configuration:
+Reload the configuration to activate the newly enabled plugin:
 
 ```bash
 source ~/.zshrc
@@ -40,22 +44,23 @@ source ~/.zshrc
 
 ## zsh-syntax-highlighting
 
-Install the `zsh-syntax-highlighting` plugin for Oh My Zsh by following the
-[official installation instructions](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md):
+Install `zsh-syntax-highlighting` according to the
+[official installation instructions](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
+It highlights valid commands, paths, and shell syntax as they are entered:
 
 ```bash
 git clone https://github.com/zsh-users/zsh-syntax-highlighting \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-Add the plugin to the `plugins` list in `~/.zshrc`. Keep
+Add the plugin to the `plugins` list in `~/.zshrc` so it runs at shell startup. Keep
 `zsh-syntax-highlighting` at the end of the list:
 
 ```zsh
 plugins=(... zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-Reload the configuration:
+Reload the configuration to activate syntax highlighting:
 
 ```bash
 source ~/.zshrc
@@ -63,21 +68,22 @@ source ~/.zshrc
 
 ## Powerlevel10k
 
-Install and configure the Powerlevel10k theme for Oh My Zsh by following the
-[official Oh My Zsh instructions](https://github.com/romkatv/powerlevel10k#oh-my-zsh):
+Install Powerlevel10k according to the
+[official Oh My Zsh instructions](https://github.com/romkatv/powerlevel10k#oh-my-zsh).
+It provides the configurable prompt shown in each terminal:
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Set the theme in `~/.zshrc`:
+Set the theme in `~/.zshrc` so Oh My Zsh loads it:
 
 ```zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Restart Zsh or reload the configuration:
+Restart Zsh or reload the configuration to display the new prompt:
 
 ```bash
 source ~/.zshrc
@@ -89,8 +95,9 @@ appearance options.
 
 ## autoenv
 
-Install `autoenv` by following the
-[official autoenv repository](https://github.com/hyperupcall/autoenv):
+Install `autoenv` from its
+[official repository](https://github.com/hyperupcall/autoenv). It loads
+project-specific environment settings when you enter a directory:
 
 ```bash
 git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
@@ -107,7 +114,7 @@ See the
 [Oh My Zsh autoenv plugin documentation](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autoenv)
 for the integration details.
 
-Reload the configuration:
+Reload the configuration to make the integration available:
 
 ```bash
 source ~/.zshrc
@@ -115,8 +122,9 @@ source ~/.zshrc
 
 ## copypath
 
-Enable the `copypath` plugin included with Oh My Zsh. It does not require a
-separate installation:
+Enable the `copypath` plugin included with Oh My Zsh. It copies the current
+directory's absolute path to the clipboard and does not require a separate
+installation:
 
 ```zsh
 plugins=(... zsh-autosuggestions zsh-syntax-highlighting autoenv copypath)
@@ -137,7 +145,7 @@ Run `copypath` from a directory to copy its absolute path to the clipboard:
 copypath
 ```
 
-Reload the configuration after updating `~/.zshrc`:
+Reload the configuration after updating `~/.zshrc` to register the command:
 
 ```bash
 source ~/.zshrc
@@ -145,8 +153,8 @@ source ~/.zshrc
 
 ## copyfile
 
-Enable the `copyfile` plugin included with Oh My Zsh. It does not require a
-separate installation:
+Enable the `copyfile` plugin included with Oh My Zsh. It copies a file's
+contents to the clipboard and does not require a separate installation:
 
 ```zsh
 plugins=(... zsh-autosuggestions zsh-syntax-highlighting autoenv copypath copyfile)
@@ -162,7 +170,7 @@ path to copy the file contents to the clipboard:
 copyfile path/to/file
 ```
 
-Reload the configuration after updating `~/.zshrc`:
+Reload the configuration after updating `~/.zshrc` to register the command:
 
 ```bash
 source ~/.zshrc
@@ -171,9 +179,22 @@ source ~/.zshrc
 ## Example configuration
 
 The repository includes a complete [`.zshrc` example](.zshrc) that combines
-the theme and plugins described above. Use it as a reference when creating or
-updating `~/.zshrc`; review the plugin list and personal settings before
-copying any entries into your own configuration.
+the theme and plugins described above. Optionally link it to `~/.zshrc` when
+you want the active Zsh configuration to synchronize automatically after
+`git pull`:
 
-Configuration files and additional Zsh setup will be added to this directory
-as they are introduced.
+```bash
+ln -sfn ~/environment_configuration_terminal/zsh/.zshrc ~/.zshrc
+```
+
+If you do not want automatic synchronization, manage `~/.zshrc` separately.
+Copy the repository file to `~/.zshrc` instead:
+
+```bash
+cp ~/environment_configuration_terminal/zsh/.zshrc ~/.zshrc
+```
+
+This creates a local copy, so repeat the copy after repository updates when
+you want to use them. Review the plugin list and personal settings first:
+either approach replaces the existing `~/.zshrc` file. Afterwards, reload Zsh
+with `source ~/.zshrc`.

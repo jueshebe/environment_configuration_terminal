@@ -1,6 +1,8 @@
 # environment_configuration_terminal
 
-This repository contains the terminal configuration used on the computer.
+This repository contains the terminal configuration used on the computer. It
+keeps each tool's configuration under version control so the same terminal
+environment can be restored or updated from one location.
 
 ## Usage
 
@@ -14,9 +16,13 @@ git clone https://github.com/jueshebe/environment_configuration_terminal.git \
 cd ~/environment_configuration_terminal
 ```
 
-Each tool has its own directory and README with setup instructions. After the
-initial setup, update all configured tools by pulling the latest repository
-changes:
+The clone location is part of the configuration because the background image
+paths rely on it. Symbolic links are optional: create them only when you want
+the active tool configuration to synchronize automatically with repository
+updates. Without a symbolic link, copy the repository configuration file to
+the tool's configuration path instead. Each tool's README gives the exact
+source and destination paths. After the initial setup, update the repository
+configuration by pulling the latest changes:
 
 ```bash
 git pull
@@ -24,7 +30,12 @@ git pull
 
 ## Configurations
 
-- [Kitty](kitty/README.md): base configuration, MesloLGS Nerd Font, and the
-  Dracula theme.
-- [Zsh](zsh/README.md): installation instructions and future shell
-  configuration.
+- [Kitty](kitty/README.md): the terminal emulator. Its configuration sets the
+  Dracula colors, MesloLGS Nerd Font, window behavior, wallpaper, and desktop
+  application icon.
+- [Zsh](zsh/README.md): the interactive shell. Its setup installs Oh My Zsh,
+  the Powerlevel10k prompt, and plugins for suggestions, syntax highlighting,
+  environment loading, and clipboard commands.
+- [Tmux](tmux/README.md): the terminal multiplexer. Its configuration provides
+  persistent terminal sessions, custom key bindings, mouse support, pane
+  management, and plugins managed by TPM.
