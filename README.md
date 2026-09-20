@@ -39,3 +39,5 @@ git pull
 - [Tmux](tmux/README.md): the terminal multiplexer. Its configuration provides
   persistent terminal sessions, custom key bindings, mouse support, pane
   management, and plugins managed by TPM.
+- [Neovim](nvim/README.md): the extensible text editor. Its plugins are
+  managed with vim-plug.

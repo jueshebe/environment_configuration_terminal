@@ -93,32 +93,6 @@ On the first start, Powerlevel10k opens its configuration wizard. Complete the
 wizard to select the prompt style, transient prompt behavior, and other
 appearance options.
 
-## autoenv
-
-Install `autoenv` from its
-[official repository](https://github.com/hyperupcall/autoenv). It loads
-project-specific environment settings when you enter a directory:
-
-```bash
-git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
-```
-
-Oh My Zsh includes an `autoenv` plugin that integrates the tool with Zsh. Enable
-it in `~/.zshrc` together with the other plugins:
-
-```zsh
-plugins=(... zsh-autosuggestions zsh-syntax-highlighting autoenv)
-```
-
-See the
-[Oh My Zsh autoenv plugin documentation](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autoenv)
-for the integration details.
-
-Reload the configuration to make the integration available:
-
-```bash
-source ~/.zshrc
-```
 
 ## copypath
 
