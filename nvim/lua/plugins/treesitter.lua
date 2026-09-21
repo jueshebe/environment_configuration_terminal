@@ -1,4 +1,7 @@
 local treesitter = require("nvim-treesitter")
+local treesitter_source = debug.getinfo(treesitter.setup, "S").source:sub(2)
+local treesitter_runtime = vim.fn.fnamemodify(treesitter_source, ":h:h:h") .. "/runtime"
+vim.opt.rtp:prepend(treesitter_runtime)
 
 treesitter.setup({
   install_dir = vim.fn.stdpath("data") .. "/site",

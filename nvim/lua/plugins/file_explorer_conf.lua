@@ -122,10 +122,6 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     update_root = false,
     ignore_list = {},
   },
-  system_open = {
-    cmd = "",
-    args = {},
-  },
   diagnostics = {
     enable = false,
     show_on_dirs = false,
@@ -235,4 +231,3 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<Leader>tr", ":NvimTreeToggle<CR>", opts)
-
