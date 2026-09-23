@@ -36,12 +36,6 @@ Then enable it in `~/.zshrc` so Oh My Zsh loads it when the shell starts:
 plugins=(... zsh-autosuggestions)
 ```
 
-Reload the configuration to activate the newly enabled plugin:
-
-```bash
-source ~/.zshrc
-```
-
 ## zsh-syntax-highlighting
 
 Install `zsh-syntax-highlighting` according to the
@@ -57,13 +51,7 @@ Add the plugin to the `plugins` list in `~/.zshrc` so it runs at shell startup. 
 `zsh-syntax-highlighting` at the end of the list:
 
 ```zsh
-plugins=(... zsh-autosuggestions zsh-syntax-highlighting)
-```
-
-Reload the configuration to activate syntax highlighting:
-
-```bash
-source ~/.zshrc
+plugins=(... zsh-syntax-highlighting)
 ```
 
 ## Powerlevel10k
@@ -83,12 +71,6 @@ Set the theme in `~/.zshrc` so Oh My Zsh loads it:
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Restart Zsh or reload the configuration to display the new prompt:
-
-```bash
-source ~/.zshrc
-```
-
 On the first start, Powerlevel10k opens its configuration wizard. Complete the
 wizard to select the prompt style, transient prompt behavior, and other
 appearance options.
@@ -101,7 +83,7 @@ directory's absolute path to the clipboard and does not require a separate
 installation:
 
 ```zsh
-plugins=(... zsh-autosuggestions zsh-syntax-highlighting autoenv copypath)
+plugins=(... copypath)
 ```
 
 See the
@@ -119,19 +101,13 @@ Run `copypath` from a directory to copy its absolute path to the clipboard:
 copypath
 ```
 
-Reload the configuration after updating `~/.zshrc` to register the command:
-
-```bash
-source ~/.zshrc
-```
-
 ## copyfile
 
 Enable the `copyfile` plugin included with Oh My Zsh. It copies a file's
 contents to the clipboard and does not require a separate installation:
 
 ```zsh
-plugins=(... zsh-autosuggestions zsh-syntax-highlighting autoenv copypath copyfile)
+plugins=(... copyfile)
 ```
 
 See the
@@ -144,7 +120,10 @@ path to copy the file contents to the clipboard:
 copyfile path/to/file
 ```
 
-Reload the configuration after updating `~/.zshrc` to register the command:
+## Apply the configuration
+
+After installing the selected plugins in `.zshrc`,
+reload the configuration once:
 
 ```bash
 source ~/.zshrc
@@ -152,23 +131,4 @@ source ~/.zshrc
 
 ## Example configuration
 
-The repository includes a complete [`.zshrc` example](.zshrc) that combines
-the theme and plugins described above. Optionally link it to `~/.zshrc` when
-you want the active Zsh configuration to synchronize automatically after
-`git pull`:
-
-```bash
-ln -sfn ~/environment_configuration_terminal/zsh/.zshrc ~/.zshrc
-```
-
-If you do not want automatic synchronization, manage `~/.zshrc` separately.
-Copy the repository file to `~/.zshrc` instead:
-
-```bash
-cp ~/environment_configuration_terminal/zsh/.zshrc ~/.zshrc
-```
-
-This creates a local copy, so repeat the copy after repository updates when
-you want to use them. Review the plugin list and personal settings first:
-either approach replaces the existing `~/.zshrc` file. Afterwards, reload Zsh
-with `source ~/.zshrc`.
+The repository includes a complete [`.zshrc` example](.zshrc).

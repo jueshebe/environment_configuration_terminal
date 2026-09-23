@@ -41,8 +41,9 @@ local copy must be copied again after repository updates:
 cp ~/environment_configuration_terminal/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-Start Tmux, then press `prefix` followed by `I` (capital i) to let TPM install
+Start Tmux, then press `prefix` (`C-Space`) followed by `I` (capital i) to let TPM install
 the declared plugins. This activates pane navigation, the Dracula theme,
 session restore, automatic session saving, and URL/file opening support.
 
-The configured prefix is `Ctrl-Space`; it replaces Tmux's default `Ctrl-b`.
+The configured prefix is `prefix` (`C-Space`); it replaces Tmux's default
+`Ctrl-b`.

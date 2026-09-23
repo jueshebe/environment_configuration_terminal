@@ -4,6 +4,15 @@ This repository contains the terminal configuration used on the computer. It
 keeps each tool's configuration under version control so the same terminal
 environment can be restored or updated from one location.
 
+## Preview
+
+The configuration combines Kitty, Zsh, Tmux, and Neovim into a single terminal
+workflow:
+
+![Configured terminal with Tmux and Neovim](images/terminal.png)
+
+![Configured Neovim and Tmux workspace](images/terminal2.png)
+
 ## Usage
 
 Clone this repository into the fixed project directory
@@ -39,5 +48,5 @@ git pull
 - [Tmux](tmux/README.md): the terminal multiplexer. Its configuration provides
   persistent terminal sessions, custom key bindings, mouse support, pane
   management, and plugins managed by TPM.
-- [Neovim](nvim/README.md): the extensible text editor. Its plugins are
-  managed with vim-plug.
+- [Neovim](nvim/README.md): the extensible text editor. Its Lua configuration
+  and plugins are managed with vim-plug.
