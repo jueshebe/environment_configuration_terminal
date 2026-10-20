@@ -44,7 +44,7 @@ git pull
   application icon.
 - [Zsh](zsh/README.md): the interactive shell. Its setup installs Oh My Zsh,
   the Powerlevel10k prompt, and plugins for suggestions, syntax highlighting,
-  environment loading, and clipboard commands.
+  and clipboard commands.
 - [Tmux](tmux/README.md): the terminal multiplexer. Its configuration provides
   persistent terminal sessions, custom key bindings, mouse support, pane
   management, and plugins managed by TPM.
