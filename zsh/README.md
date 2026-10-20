@@ -3,7 +3,7 @@
 This directory configures [Zsh](https://www.zsh.org/), the interactive shell.
 The included `.zshrc` uses Oh My Zsh, the Powerlevel10k prompt, and plugins to
 improve the Zsh command-line experience with suggestions, syntax highlighting,
-project-specific environments, and clipboard commands.
+and clipboard commands.
 
 ## Installation
 
